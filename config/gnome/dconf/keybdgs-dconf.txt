@@ -1,0 +1,50 @@
+[org/gnome/desktop/wm/keybindings]
+close=['<Super>w']
+maximize=@as []
+minimize=@as []
+move-to-workspace-left=['<Control><Super>Left']
+move-to-workspace-right=['<Control><Super>Right']
+switch-applications=['<Alt>Tab']
+switch-applications-backward=['<Shift><Alt>Tab']
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-left=['<Control><Alt>Left']
+switch-to-workspace-right=['<Control><Alt>Right']
+switch-windows=@as []
+switch-windows-backward=@as []
+toggle-maximized=['<Super>m']
+unmaximize=['<Shift><Super>Down']
+
+[org/gnome/settings-daemon/plugins/media-keys]
+control-center=['<Super>s']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+screensaver=@as []
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control>space'
+command='ulauncher-toggle'
+name='ulauncher'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>Return'
+command='qterminal'
+name='terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>slash'
+command='firefox'
+name='firefox'
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='default'
+speed=-1.0
+
+[org/gnome/desktop/peripherals/touchpad]
+click-method='areas'
+tap-to-click=true
+two-finger-scrolling-enabled=true
+
+[org/gnome/settings-daemon/plugins/power]
+idle-dim=false
+power-button-action='nothing'
+

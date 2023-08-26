@@ -1,6 +1,6 @@
 
-### Xorg Bspwm polybar Desktop
+# Desktop preview
 
-![img](./Wallpapers/preview/Bspwm-1.png.png)
+![img](./Wallpapers/preview/Bspwm-1.png)
 ![img](./Wallpapers/preview/Bspwm-2.png)
 

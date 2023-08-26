@@ -7,6 +7,9 @@ cp -r ./Wallpapers/ ~/Pictures/
 mkdir -p ~/.config/
 cp -r ./config/.screenlayout/ ~/
 
+cp ../config/.xprofile ~/
+cp ../config/wifi.sh ~/
+
 directories=(
     "config/alacritty"
     "config/bspwm"

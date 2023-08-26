@@ -24,9 +24,9 @@ sudo pacman -Rndd xdg-desktop-portal xdg-desktop-portal-gtk
 
 # Fonts
 sudo pacman -S adobe-source-han-sans-jp-fonts
-yay -S ttf-hack-nerd 
+yay -S ttf-hack-nerd apple-fonts
 
 # AUR Apps
-yay -S firefox-bin visual-studio-code-bin postman-bin mongodb-bin mongodb-compass drawio-desktop-bin gitkraken
+yay -S firefox-bin visual-studio-code-bin mongodb-bin mongodb-compass drawio-desktop-bin gitkraken figma-linux-bin
 
 echo "Packages installation finished ..."

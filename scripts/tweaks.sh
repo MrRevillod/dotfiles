@@ -34,4 +34,3 @@ sudo flatpak override --filesystem=xdg-config/gtk-4.0
 
 # Change user default shell
 chsh -s "$(which fish)"
-

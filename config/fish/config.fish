@@ -19,6 +19,12 @@ alias UCT="cd ~/Documents/UCT/"
 alias uct="cd ~/Documents/UCT/"
 alias vi="nvim"
 alias vim="nvim"
+alias code="codium"
 
 starship init fish | source
 set -g fish_greeting
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+

@@ -21,7 +21,13 @@ fi
 if [ $MONITOR_COUNT -eq 2 ]; then
     bspc monitor eDP1 -d I II III IV V
     bspc monitor HDMI1 -d VI VII VIII IX X
+  
     xrandr --output eDP1 --primary --mode 1920x1080 --rotate normal --output HDMI1 --mode 1920x1080 --rotate normal --right-of eDP1
+
+    bspc monitor eDP1 -d I II III IV V
+    bspc monitor HDMI1 -d VI VII VIII IX X
+
+    polybar -r -c ~/.config/polybar/config.ini main &
     polybar -r -c ~/.config/polybar/config.ini external &
 fi
 

@@ -28,3 +28,7 @@ set -g fish_greeting
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+# xc8
+
+set -x PATH /opt/microchip/xc8/v2.36/pic/bin $PATH
+

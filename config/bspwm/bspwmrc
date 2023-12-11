@@ -32,11 +32,11 @@ if [ $MONITOR_COUNT -eq 2 ]; then
 fi
 
 #Touchpad setup
-# xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Natural Scrolling Enabled" 1 &
-# xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Tapping Enabled" 1 &
+xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Natural Scrolling Enabled" 1 &
+xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Tapping Enabled" 1 &
 
 #Keyboard layout setup
-# setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 
 polybar -r -c ~/.config/polybar/config.ini main &
 

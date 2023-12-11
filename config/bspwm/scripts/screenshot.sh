@@ -12,9 +12,9 @@ file="$(xdg-user-dir PICTURES)/screenshot-$(date +%F_%T).png"
 selected="$(echo -e "$options" | rofi -lines 3 -dmenu -p 'scrot')"
 case $selected in
   "$option0")
-    sleep 1 && scrot -F "$file";;
+    sleep 1 && gnome-screenshot -f "$file";;
   "$option1")
-    sleep 1 && scrot -s -F "$file";;
+    sleep 1 && gnome-screenshot -acf /tmp/my-screenshot && cat /tmp/my-screenshot | xclip -i -selection clipboard -target image/png;;
   "$option2")
-    sleep 1 && scrot -u -F "$file";;
+    sleep 1 && gnome-screenshot -w -f "$file";;
 esac

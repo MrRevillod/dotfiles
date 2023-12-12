@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 mkdir -p ~/Pictures/
@@ -29,6 +28,8 @@ for dir in "${directories[@]}"; do
     cp -r "./$dir" ~/.config
 
 done
+
+sudo mv ./config/rofi/rounded-gray-dark.rasi /usr/share/rofi/themes/
 
 echo "Finished ... se han copiado las configuraciones"
 

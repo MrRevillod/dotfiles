@@ -26,11 +26,14 @@ install "https://github.com/vinceliuice/WhiteSur-gtk-theme.git" "WhiteSur-gtk-th
 chmod +x ./tweaks.sh
 
 # Apply theme for flatpak apps
+./install.sh -l
 ./tweaks.sh -F
 sudo flatpak override --filesystem=xdg-config/gtk-4.0
 
 # Optional: Install gtk theme on firefox
-# ./tweaks.sh -f monterey
+firefox &
+./tweaks.sh -f monterey
 
 # Change user default shell
 chsh -s "$(which fish)"
+

@@ -9,6 +9,10 @@ cp -r ./config/.screenlayout/ ~/
 cp ../config/.xprofile ~/
 cp ../config/wifi.sh ~/
 
+mkdir -p ~/.mozilla/firefox/firefox-themes/
+
+cp -r ./config/firefox/theme/* ~/mozilla/firefox/firefox-themes
+
 directories=(
     "config/alacritty"
     "config/bspwm"
@@ -29,7 +33,7 @@ for dir in "${directories[@]}"; do
 
 done
 
-sudo mv ./config/rofi/rounded-gray-dark.rasi /usr/share/rofi/themes/
+sudo cp ./config/rofi/rounded-gray-dark.rasi /usr/share/rofi/themes/
 
 echo "Finished ... se han copiado las configuraciones"
 

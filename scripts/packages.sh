@@ -8,20 +8,17 @@ cd yay/ && makepkg -si
 echo "Installing apps as sudo..."
 
 # Desktop packages
-sudo pacman -S bspwm sxhkd arandr picom polybar nitrogen dunst rofi gnome-screenshoot
+sudo pacman -S bspwm sxhkd arandr picom polybar nitrogen dunst rofi gnome-screenshot
 
 # Applications
-sudo pacman -S discord vlc telegram-desktop keepassxc nautilus lxappeareance-gtk3 eog virtualbox linux-headers flatpak
+sudo pacman -S discord vlc telegram-desktop keepassxc nautilus lxappearance eog flatpak
 
 # Terminal
-sudo pacman -S fish neovim tree lsd unrar unzip htop bat xclip
+sudo pacman -S fish neovim tree lsd unrar unzip htop bat xclip python-pip
 
 # Programming
-sudo pacman -S git nodejs npm pnpm rust alacritty
+sudo pacman -S git nodejs npm pnpm rust alacritty mysql
 curl -sS https://starship.rs/install.sh | sh
-
-# Python libraries
-sudo pacman -S python-pip python-scipy python-numpy python-pygame python-numba python-matplotlib python-pillow
 
 # Fix gtk slow open apps
 sudo pacman -Rndd xdg-desktop-portal

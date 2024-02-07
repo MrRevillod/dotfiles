@@ -34,6 +34,9 @@ sudo flatpak override --filesystem=xdg-config/gtk-4.0
 firefox &
 ./tweaks.sh -f monterey
 
+rm -rf ~/.mozilla/firefox/firefox-themes/*
+cp -r ./config/firefox/theme/* ~/.mozilla/firefox/firefox-themes
+
 # Change user default shell
 chsh -s "$(which fish)"
 

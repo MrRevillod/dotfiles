@@ -1,0 +1,11 @@
+
+/* Add your own custom styles here */
+
+#identity-box.extensionPage #identity-icon-label {
+visibility: collapse !important;
+transition: visibility 250ms ease-in-out;
+}
+#identity-box.extensionPage:hover #identity-icon-label {
+visibility: visible !important;
+transition: visibility 250ms ease-in-out 500ms;
+}

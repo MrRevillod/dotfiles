@@ -28,7 +28,7 @@ white = "0xdfdfe0"
 yellow = "0x08bdba"
 
 [colors.primary]
-background = "0x1c1c1c"
+background = "0x1b1b1b"
 foreground = "0xf2f4f8"
 
 [cursor]
@@ -48,7 +48,7 @@ family = "Caskaydia Cove Nerd Font"
 history = 2000
 
 [window]
-opacity = 0.98
+opacity = 0.99
 
 [window.dimensions]
 columns = 120

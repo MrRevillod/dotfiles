@@ -20,6 +20,7 @@ alias uct="cd ~/Documents/UCT/"
 alias vi="nvim"
 alias vim="nvim"
 alias out="sudo systemctl restart gdm"
+alias pixels="pixels-cli"
 
 starship init fish | source
 set -g fish_greeting

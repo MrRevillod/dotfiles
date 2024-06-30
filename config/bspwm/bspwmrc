@@ -1,0 +1,51 @@
+#!/bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc config border_width 2
+bspc config window_gap 12
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config border_width 0
+bspc config focus_follows_pointer true
+
+$HDMI_connected=$(xrandr --query | grep 'HDMI1')
+MONITOR_COUNT=$(xrandr --query | grep ' connected' | wc -l)
+
+if [ $MONITOR_COUNT -eq 1 ]; then
+    bspc monitor -d I II III IV V VI VII VIII IX X
+    xrandr --output eDP1 --primary --mode 1920x1080 --rotate normal
+fi
+
+if [ $MONITOR_COUNT -eq 2 ]; then
+    bspc monitor eDP1 -d I II III IV V
+    bspc monitor HDMI1 -d VI VII VIII IX X
+  
+    xrandr --output eDP1 --primary --mode 1920x1080 --rotate normal --output HDMI1 --mode 1920x1080 --rotate normal --right-of eDP1
+
+    bspc monitor eDP1 -d I II III IV V
+    bspc monitor HDMI1 -d VI VII VIII IX X
+
+    polybar -r -c ~/.config/polybar/config.ini main &
+    polybar -r -c ~/.config/polybar/config.ini external &
+fi
+
+#Touchpad setup
+xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Natural Scrolling Enabled" 1 &
+xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Tapping Enabled" 1 &
+
+#Keyboard layout setup
+setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
+
+polybar -r -c ~/.config/polybar/config.ini main &
+
+# Iniciar el demonio de notificaciones Dunst
+dunst &
+
+# Iniciar Picom con la configuración personalizada
+picom -b --config ~/.config/picom/picom.conf &
+
+# Iniciar Nitrogen
+nitrogen --restore &
+

@@ -1,8 +1,8 @@
-
 return {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
     opts = function()
+
         local logo = [[
 ⣿⣿⣦⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⣠⣶⡿
 ⣿⣿⣿⣷⣄⢿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣴⣾⣿⠟⠁
@@ -21,7 +21,8 @@ return {
 ⠀⢀⡀⠀⠀⠀⣰⢃⡔⠁⠀⣀⡤⠜⠒⡉⠀⠀⠀⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠈⠉⣿⠀⠀⠈⣏⢦⠔⠀⠀⢀⠀⣀
         ]]
 
-        logo = string.rep("\n", 8) .. logo .. "\n\n"
+
+        logo = string.rep("\n", 4) .. logo .. "\n\n"
 
         local opts = {
             theme = "doom",
@@ -31,8 +32,8 @@ return {
             config = {
                 header = vim.split(logo, "\n"),
                 center = {
-                    { action = "Explore",   desc = "  Open file explorer", icon = "",     key = "e"},
-                    { action = "qa",        desc = " Quit",              icon = " ",    key = "q" },
+                    { action = "Telescope file_browser", desc = "  Open file explorer", icon = "", key = "e" },
+                    { action = "qa", desc = " Quit", icon = " ", key = "q" },
                 },
             },
         }
@@ -42,7 +43,7 @@ return {
             vim.api.nvim_create_autocmd("User", {
                 pattern = "DashboardLoaded",
                 callback = function()
-                require("lazy").show()
+                    require("lazy").show()
                 end,
             })
         end
